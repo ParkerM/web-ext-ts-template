@@ -19,10 +19,12 @@
     "stage:minor": "npm run stage --release-as minor",
     "stage:major": "npm run stage --release-as major",
     "pack": "web-ext build",
-    "release": "npm run build-release && npm run pack"
+    "release": "npm run build-release && npm run pack",
+    "prepare": "husky install"
   },
   "engines": {
-    "node": "^18.x"
+    "node": ">=18.0.0",
+    "npm": ">=8.7.0"
   },
   "private": true,
   "devDependencies": {
@@ -48,12 +50,13 @@
     "web-ext": "^7.3.1",
     "webextension-polyfill": "^0.10.0",
     "webpack": "^5.75.0",
-    "webpack-cli": "^5.0.0"
+    "webpack-cli": "^5.0.0",
+    "husky": "^8.0.0"
   },
   "dependencies": {},
   "overrides": {
-	"@types/jest": "$@types/jest",
-	"jest": "$jest",
-	"webextension-polyfill": "$webextension-polyfill"
+    "@types/jest": "$@types/jest",
+    "jest": "$jest",
+    "webextension-polyfill": "$webextension-polyfill"
   }
 }
