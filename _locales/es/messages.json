@@ -1,0 +1,10 @@
+{
+  "extensionName": {
+    "message": "Plantilla de proyecto web-ext y TypeScript",
+    "description": "Name of the extension."
+  },
+  "extensionDescription": {
+    "message": "Plantilla de proyecto web-ext y TypeScript",
+    "description": "Description of the extension."
+  }
+}

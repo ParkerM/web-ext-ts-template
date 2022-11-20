@@ -1,0 +1,10 @@
+{
+  "extensionName": {
+    "message": "web-ext and TypeScript project template",
+    "description": "Name of the extension."
+  },
+  "extensionDescription": {
+    "message": "web-ext and TypeScript project template",
+    "description": "Description of the extension."
+  }
+}
