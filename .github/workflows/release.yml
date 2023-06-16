@@ -15,11 +15,11 @@ jobs:
         with:
           node-version: 18.x
       - name: Install dependencies
-        run: yarn --frozen-lockfile
+        run: npm ci
 
       - name: Create build artifacts
         run: |
-          yarn run release
+          npm run release
           cd web-ext-artifacts/
           CHECKSUM_OUT=$(sha256sum *.zip)
           CHECKSUM_FILE=$(echo $CHECKSUM_OUT | cut -d " " -f 2).sha256.txt

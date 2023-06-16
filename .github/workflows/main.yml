@@ -12,13 +12,13 @@ jobs:
       with:
         node-version: 18.x
     - name: Install dependencies
-      run: yarn --frozen-lockfile
+      run: npm ci
 
     - name: eslint
-      run: yarn run lint:eslint
+      run: npm run lint:eslint
 
     - name: web-ext lint
-      run: yarn run lint:web-ext
+      run: npm run lint:web-ext
 
   test:
     runs-on: ubuntu-22.04
@@ -29,10 +29,10 @@ jobs:
         with:
           node-version: 18.x
       - name: Install dependencies
-        run: yarn --frozen-lockfile
+        run: npm ci
 
       - name: Jest tests
-        run: yarn run test:coverage
+        run: npm run test:coverage
 
       - name: Upload coverage artifacts
         if: ${{ github.ref == 'refs/heads/main' }}
